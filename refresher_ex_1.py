@@ -25,8 +25,9 @@
 # Task: get the user's name with input() and print out Hello <name>
 print("start of part 0") # set breakpoint here
 # your code here
-
-
+print('What is your name?')
+name = input()
+print('That\'s a cool name! Hello, ' + name + '.') 
 print("end of 0") # set breakpoint here 
 '''
 
