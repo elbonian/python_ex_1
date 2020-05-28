@@ -26,7 +26,7 @@
 print("start of part 0") # set breakpoint here
 # your code here
 print('What is your name?')
-name = input()
+name = 'aa'#input()
 print('That\'s a cool name! Hello, ' + name + '.') 
 print("end of 0") # set breakpoint here 
 '''
@@ -103,8 +103,19 @@ print("start of part 1") # set breakpoint here
 L = [0, [], [1,2,3,4], [[5],[6,7]], [8,9,10]]
 print(L)
 # your code
-
-
+# We need to make X a list
+X = []
+# Let's make use of append() to add to X
+X.append(L[0])
+X.append(L[2][1])
+X.append(L[2][2])
+# We append a list so X has a list within a list in its 4th element
+X.append([L[3][0][0], L[3][1][0]])
+# Here we get a bit creative to slice at least once, as required.
+X.append(L[4][0:1][0])
+X.append(L[4][2])
+# We print X out for evaluation purposes
+print(X)
 print("end of 1") # set breakpoint here 
 '''
 
