@@ -172,10 +172,10 @@ sentences = s.split(". ")
 # As required, we will count sentences. We are using i as the counter.
 i = 0
 for x in sentences:
-  # We increment the sentence counter
-  i=i+1
-  # And now we pretty-print the sentence
-  print("Sentence " + str(i) + " is: " + x.replace('.', ''))
+    # We increment the sentence counter
+    i=i+1
+    # And now we pretty-print the sentence
+    print("Sentence " + str(i) + " is: " + x.replace('.', ''))
 print("end of 2") # set breakpoint here 
 '''
 
@@ -226,8 +226,23 @@ for e in sentence_list:
 # LANGUAGE
 print("start of part 3") # set breakpoint here
 # your code here
-
-
+# We split the string into words in a list.
+words = s.split(" ")
+# 'i' will be used to know when to show words in upper/lower case 
+i = 1
+for x in words:
+    # We remove the dots
+    x = x.replace('.', '')
+    # We remove the commas
+    x = x.replace(',', '')
+    # And now, only if we are dealing with an odd number, we turn the word to upper case.
+    # This method has the advantage that it can support future logic where we only want 
+    # to capitalize multiples of numbers other than 2.
+    if(i%2 == 0):
+        x = x.upper()
+    print(x)
+    # We need to increment i to keep track of how many words we've processed
+    i = i + 1
 print("end of 3") # set breakpoint here 
 '''
 
