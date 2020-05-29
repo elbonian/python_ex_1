@@ -226,6 +226,7 @@ for e in sentence_list:
 # LANGUAGE
 print("start of part 3") # set breakpoint here
 # your code here
+s = "Python is an interpreted, high-level, general-purpose programming language."
 # We split the string into words in a list.
 words = s.split(" ")
 # 'i' will be used to know when to show words in upper/lower case 
@@ -318,8 +319,17 @@ print("start of part 4") # set breakpoint here
 s = "A very long description" # a long string
 filler = "..."
 # your code here
-
-
+for x in range(5, 15):
+    # First we check if we need to even calculate the abbreviation due to the length limit
+    if len(filler)+x*2 > len(s):
+        result = str(x) + " " + s
+    else:
+        # We separate the abbreviation in two sides: right and left.
+        rightString = s[-x:]
+        leftString = s[:x]
+        # Then we put them together
+        result = str(x) + " " + leftString + filler + rightString
+    print(result)
 print("end of 4") # set breakpoint here 
 '''
 
